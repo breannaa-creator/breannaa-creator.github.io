@@ -1,111 +1,126 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>ICS 111 - Breanna's Page</title>
+<meta charset="UTF-8">
+<title>ICS 111 Extra Credit</title>
 
-    <style>
-        body {
-            background-color: #0f172a;
-            color: #e2e8f0;
-            font-family: "Courier New", monospace;
-            margin: 0;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: "Courier New", monospace;
+    background: #0a0f1f;
+    color: #00ffcc;
+    text-align: center;
+    overflow-x: hidden;
+}
 
-        header {
-            background-color: #1e293b;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 3px solid #38bdf8;
-        }
+/* Header */
+header {
+    background: linear-gradient(90deg, #2563eb, #1d4ed8);
+    padding: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    box-shadow: 0 0 15px #2563eb;
+}
 
-        h1 {
-            margin: 0;
-            color: #38bdf8;
-        }
+/* Floating code animation background */
+.code-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.08;
+    font-size: 20px;
+    white-space: pre;
+    animation: float 20s linear infinite;
+    pointer-events: none;
+}
 
-        .container {
-            padding: 30px;
-        }
+@keyframes float {
+    from { transform: translateY(100%); }
+    to { transform: translateY(-100%); }
+}
 
-        .card {
-            background-color: #1e293b;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #000;
-        }
+/* Cards */
+.box {
+    background: rgba(255,255,255,0.05);
+    margin: 20px auto;
+    padding: 20px;
+    width: 70%;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,255,204,0.2);
+    transition: transform 0.3s;
+}
 
-        .code {
-            background-color: #020617;
-            padding: 10px;
-            border-radius: 5px;
-            color: #22c55e;
-        }
+.box:hover {
+    transform: scale(1.03);
+}
 
-        a {
-            color: #38bdf8;
-            text-decoration: none;
-        }
+/* Typing effect */
+.typing {
+    border-right: 2px solid #00ffcc;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 3s steps(40, end) forwards;
+}
 
-        a:hover {
-            text-decoration: underline;
-        }
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
 
-        footer {
-            text-align: center;
-            padding: 10px;
-            border-top: 2px solid #38bdf8;
-            margin-top: 20px;
-        }
-    </style>
+footer {
+    margin-top: 40px;
+    font-size: 12px;
+    opacity: 0.6;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>💻 ICS 111 Website</h1>
-    <p>Created by Breanna</p>
+💻 ICS 111 — GitHub Pages Project
 </header>
 
-<div class="container">
+<!-- floating code background -->
+<div class="code-bg">
+while(true) { study(); code(); debug(); }
+System.out.println("Hello World");
+if(success) { celebrate(); }
+</div>
 
-    <div class="card">
-        <h2>About This Page</h2>
-        <p>This website was created as extra credit for ICS 111.</p>
-        <p>It uses HTML and a little CSS to make it look nicer.</p>
-    </div>
+<div class="box">
+    <h2 class="typing">Welcome to My Programming Website</h2>
+    <p>This site was built using HTML + CSS and deployed with GitHub Pages.</p>
+</div>
 
-    <div class="card">
-        <h2>What I'm Learning</h2>
-        <ul>
-            <li>Variables</li>
-            <li>Loops</li>
-            <li>Conditionals</li>
-            <li>Basic Java programming</li>
-        </ul>
-    </div>
+<div class="box">
+    <h2>What I Learned</h2>
+    <p>HTML structures content using tags like:</p>
+    <p>&lt;html&gt; &lt;head&gt; &lt;body&gt;</p>
+</div>
 
-    <div class="card">
-        <h2>Sample Code</h2>
-        <div class="code">
-            public class HelloWorld { <br>
-            &nbsp;&nbsp;public static void main(String[] args) { <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Hello, ICS 111!"); <br>
-            &nbsp;&nbsp;} <br>
-            }
-        </div>
-    </div>
+<div class="box">
+    <h2>ICS 111 Connection</h2>
+    <p>This course focuses on Java, but this project shows how programming applies to web development too.</p>
+</div>
 
-    <div class="card">
-        <h2>GitHub</h2>
-        <p>Check out my repository:</p>
-        <a href="https://github.com/">My GitHub</a>
-    </div>
-
+<div class="box">
+    <h2>Code Example</h2>
+    <pre>
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello ICS 111");
+    }
+}
+    </pre>
 </div>
 
 <footer>
-    <p>© 2026 Breanna | ICS 111</p>
+Made for ICS 111 Extra Credit ✨ | GitHub Pages Deployment
 </footer>
 
 </body>
